@@ -3,7 +3,7 @@ import React, { useState, Fragment } from "react"
 import styled from "styled-components"
 import { ReactSVG } from "react-svg"
 import { Link } from "gatsby"
-
+import CCPlogo from "../images/cape-curry-pot_logo+adjusted.png"
 import HamburgerIcon from "../images/hamburger.svg"
 
 const HeaderStyles = styled.header`
@@ -68,9 +68,14 @@ const Header = ({ siteTitle }) => {
     <Fragment>
       <HeaderStyles>
         <Link to="/">
-          <h4>Restaurant Name</h4>
+          <img
+          width="150"
+          height="150"
+            src={CCPlogo}>
+          </img>
         </Link>
         <img
+        height="30"
           src={HamburgerIcon}
           onClick={() => {
             console.log(menuToggle, "this")

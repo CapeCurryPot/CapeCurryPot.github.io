@@ -27,6 +27,8 @@ const IndexPage = props => {
           <div className="landing-box">
             <h2>{landingContent.landingHeading}</h2>
             <p>{landingContent.landingSubtext}</p>
+            <p>{landingContent.landingSubSubtext}</p>
+            <p>{landingContent.landingSubSubSubtext}</p>
             <Link to="/menu">
               <ActionButton>View our menu</ActionButton>
             </Link>
@@ -35,23 +37,24 @@ const IndexPage = props => {
         <div className="res-info">
           <div className="res-info-item">
             <FontAwesomeIcon icon={faMapMarkerAlt} />
-            <h3 className="title">Address</h3>
-            <p>98 West 21th Street, Suite 721 New York NY 10016</p>
+            <h3 className="title">Adresse</h3>
+            <p>Schildhornstr. 18, 12163 Berlin</p>
           </div>
           <div className="res-info-item">
             <FontAwesomeIcon icon={faClock} />
-            <h3 className="title">Opening Time</h3>
-            <p>Monday - Sunday 8am - 9pm</p>
+            <h3 className="title">Öffnungszeiten</h3>
+            <p>Dienstag bis Freitag: 11:30 - 14:00  &  17:30 - 22:00</p>
+            <p>Wochenende und Feiertage: 16:00 - 22:00</p>
           </div>
           <div className="res-info-item">
             <FontAwesomeIcon icon={faPhone} />
-            <h3 className="title">Phone</h3>
-            <p>+ 001 234 567 + 001 234 567</p>
+            <h3 className="title">Mobilnummer</h3>
+            <p>+4915734872143</p>
           </div>
           <div className="res-info-item">
             <FontAwesomeIcon icon={faEnvelope} />
             <h3 className="title">Email</h3>
-            <p>info@domain.com luto@email.com</p>
+            <p>info@capecurrypot.de</p>
           </div>
         </div>
         <AboutSection>
@@ -138,6 +141,7 @@ var ActionButton = styled.button`
   text-transform: uppercase;
   padding: 18px 36px !important;
 `
+
 var HomeStyles = styled.div`
   font-family: Lora !important;
   min-height: 100vh;
@@ -151,7 +155,8 @@ var HomeStyles = styled.div`
     background-color: #333;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
       url(${landingImg});
-    background-position: top center;
+    background-position: center;
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     color: #fff;
@@ -201,6 +206,7 @@ var HomeStyles = styled.div`
   }
 `
 
+
 export const query = graphql`
   query {
     landingContent: markdownRemark(
@@ -209,6 +215,8 @@ export const query = graphql`
       frontmatter {
         landingHeading
         landingSubtext
+        landingSubSubtext
+        landingSubSubSubtext
       }
     }
   }
