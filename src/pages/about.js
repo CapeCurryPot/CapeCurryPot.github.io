@@ -34,7 +34,9 @@ const About = () => {
               they live in Bookmarksgrove right at the coast of the Semantics.
             </p>
           </div>
-          <div class="vp-video"><video preload="" tabindex="-1" style="" src="blob:https://player.vimeo.com/0d286a12-b7aa-4b7d-aaf6-f904d68a0906"></video></div>
+          <div class="img-div video">
+            <video src="http://player.vimeo.com/video/410588697" width="480" height="270" controls></video>
+          </div>
         </AboutSection>
         <section className="team">
           <h1 className="title">Meet our team</h1>

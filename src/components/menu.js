@@ -1,40 +1,84 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 
-const menuData = [
+const mainData = [
   {
-    price: "$25.99",
-    name: "Grilled Beef with potatoes",
-    description: "Meat / Potatoes / Rice / Tomatoes",
+    price: "€12.00",
+    name: "Chicken Curry mit Reis",
+    description: "Aromatisches Cape-Malay Hähnchen-Curry mit Zimtreis. Mittel scharf",
   },
   {
-    price: "$25.99",
-    name: "Grilled Beef with potatoes",
-    description: "Meat / Potatoes / Rice / Tomatoes",
+    price: "€10.00",
+    name: "Bobotie mit Reis (Vegetarisch)",
+    description: "Ein süßlich-würziger Auflauf aus Linsen, Aprikosen und Mango mit einem Joghurt-Ei-Topping. Verfeinert mit einer erlesenen Auswahl an Gewürzen und mit Zimtreis serviert.",
   },
   {
-    price: "$25.99",
-    name: "Grilled Beef with potatoes",
-    description: "Meat / Potatoes / Rice / Tomatoes",
+    price: "€5.50",
+    name: "Samosas",
+    description: "Knusprige Teigtaschen, gefüllt mit Lamm- und Rinderhackfleisch, verfeinert mit frischem Koriander, Ingwer, Knoblauch und aromatischen, südafrikanischen Gewürzen. Mittel scharf",
   },
   {
-    price: "$25.99",
-    name: "Grilled Beef with potatoes",
-    description: "Meat / Potatoes / Rice / Tomatoes",
+    price: "€5.00",
+    name: "Samosas (vegetarisch)",
+    description: "Knusprige Teigtaschen, gefüllt mit einer Kartoffel-Erbsen-Füllung und verfeinert mit frischem  Koriander, Ingwer, Zitrone und aromatischen Gewürzen. Mittel scharf",
+  },
+  {
+    price: "€5.00",
+    name: "Samosas (vegetarisch)",
+    description: "Knusprige Teigtaschen, gefüllt mit einer Kartoffel-Erbsen-Füllung und verfeinert mit frischem  Koriander, Ingwer, Zitrone und aromatischen Gewürzen. Mittel scharf",
+  },
+]
+  const sideData = [
+  {
+    price: "€1.50",
+    name: "Sambal",
+    description: "Ein Relish-Vinaigrette aus Tomaten, Zwiebeln und Koriander. Die perfekte Beilage für Curries.",
+  },
+  {
+    price: "€1.50",
+    name: "Aprikosen-Pfirsich Chutney",
+    description: "Authentisches Südafrikanisches Aprikosen-Pfirsich Chutney, das perfekt zu Bobotie passt! Leicht scharf",
+  },
+]
+  const drinksData = [
+  {
+    price: "€2.80",
+    name: "Fritz-Kola",
+    description: "0.33L  8,45€/L, inkl. Pfand (0.08€)",
+  },
+  {
+    price: "€2.80",
+    name: "Fritz-Kola ohne Zucker",
+    description: "0.33L  8,45€/L, inkl. Pfand (0.08€)",
+  },
+  {
+    price: "€2.80",
+    name: "Fritz-Limo Orange",
+    description: "0.33L  8,45€/L, inkl. Pfand (0.08€)",
+  },
+  {
+    price: "€2.80",
+    name: "Vio Still",
+    description: "0.5L  5.60€/L inkl. Pfand (0.25€)",
+  },
+  {
+    price: "€2.80",
+    name: "Vio Medium",
+    description: "0.5L 5.60€/L inkl. Pfand (0.25€)",
   },
 ]
 const categories = [
   {
     title: "Main",
-    items: menuData,
+    items: mainData,
   },
   {
     title: "Desserts",
-    items: [menuData[0]],
+    items: sideData
   },
   {
     title: "Drinks",
-    items: menuData,
+    items: drinksData
   },
 ]
 const MenuStyles = styled.div`

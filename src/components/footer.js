@@ -55,7 +55,7 @@ const Footer = () => {
       </div>
       © {new Date().getFullYear()}, Built by
       {` `}
-      <a href="https://kwao.io">Kwao</a>
+      <a href="https://lilnickyg.github.io">Nickyg</a>
     </FooterStyles>
   )
 }

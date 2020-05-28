@@ -59,16 +59,15 @@ const IndexPage = props => {
         </div>
         <AboutSection>
           <div className="text-section">
-            <h3>Welcome to Alo Vietnam</h3>
-            <h2>Authenthic taste of Vietnam in Herndon</h2>
+            <h2>Bekannt aus Funk und Fernsehen</h2>
             <p>
               Far far away, behind the word mountains, far from the countries
               Vokalia and Consonantia, there live the blind texts. Separated
               they live in Bookmarksgrove right at the coast of the Semantics.
             </p>
           </div>
-          <div className="img-div">
-            <img src={chefImage}></img>
+          <div class="img-div video">
+            <video src="http://player.vimeo.com/video/410588697" width="480" height="270" controls></video>
           </div>
         </AboutSection>
         <section>
@@ -116,6 +115,9 @@ var AboutSection = styled.section`
   }
   .img-div {
     text-align: center;
+  }
+  .video {
+    padding-left: 100px;
   }
   @media (min-width: 1025px) {
     display: grid;
